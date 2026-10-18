@@ -7,6 +7,9 @@ targets, water, steps, fasting and weight trends — is built in.
 Local-first: your diary lives in your browser. The only network calls are the AI requests you trigger,
 made with your own Gemini API key.
 
+**Live app:** https://karlfredenhagen.github.io/nutriscan/ — installable, works offline after the first
+visit.
+
 ## Features
 
 - **AI food tracking** — text and/or photo → structured meal breakdown, editable portions, one-tap log.
@@ -81,10 +84,14 @@ viewable offline; the Gemini API is never cached. Icons are generated with
 
 ## Deploying to GitHub Pages
 
-`.github/workflows/deploy.yml` builds and publishes the app on every push to `main`:
+`.github/workflows/deploy.yml` builds and publishes the app on every push to `main`; the live site is
+https://karlfredenhagen.github.io/nutriscan/. Pages is already set to **Source: GitHub Actions** for
+this repository.
 
-1. Push this repository to GitHub (any name; the base path is derived automatically — `/<repo>/` for
-   a project page, `/` for a `<user>.github.io` repo).
+Publishing a fork:
+
+1. Push it to GitHub (any name; the base path is derived automatically — `/<repo>/` for a project
+   page, `/` for a `<user>.github.io` repo).
 2. **Settings → Pages → Build and deployment → Source: GitHub Actions.**
 3. Push to `main` (or run the workflow manually). The site lands at
    `https://<user>.github.io/<repo>/`.
